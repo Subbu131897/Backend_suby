@@ -10,7 +10,7 @@ const path = require('path');//image routes
 
 const app = express()
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 dotEnv.config();
 
 mongoose.connect(process.env.MONGO_URI)
@@ -30,6 +30,6 @@ app.listen(PORT,()=>{
   console.log(`server started at ${PORT}`)
 });
 
-app.use('/home',(req,res)=>{
-  res.send("<h1>hai</h1>hai")
+app.use('/',(req,res)=>{
+  res.send("<h1>WELCOME TO NODEJS Backend</h1>hai")
 })
