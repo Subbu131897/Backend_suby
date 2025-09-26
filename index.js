@@ -31,5 +31,8 @@ app.listen(PORT,()=>{
 });
 
 app.use('/',(req,res)=>{
-  res.send("<h1>WELCOME TO NODEJS Backend</h1>hai")
+  res.send("<h1>WELCOME TO NODEJS Backend</h1>",
+   <marquee direction="left">Hello Psycho Chandana</marquee>
+
+  )
 })
