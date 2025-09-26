@@ -30,9 +30,14 @@ app.listen(PORT,()=>{
   console.log(`server started at ${PORT}`)
 });
 
-app.use('/',(req,res)=>{
-  res.send("<h1>WELCOME TO NODEJS Backend</h1>",
-   <marquee direction="left">Hello Psycho Chandana</marquee>
-
-  )
-})
+app.use('/', (req, res) => {
+  res.send(`
+    <html>
+      <head><title>NodeJS Marquee</title></head>
+      <body>
+        <h1>WELCOME TO NODEJS Backend</h1>
+        <marquee direction="left">Hello Psycho Chandana</marquee>
+      </body>
+    </html>
+  `);
+});
