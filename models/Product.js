@@ -1,4 +1,3 @@
-const { Category } = require('@mui/icons-material');
 const mongoose = require('mongoose');
 
 const productSchema= new mongoose.Schema({
