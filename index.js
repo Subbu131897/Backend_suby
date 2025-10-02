@@ -10,8 +10,11 @@ const path = require('path');//image routes
 
 const app = express()
 
-const PORT = process.env.PORT || 4000;
+app.use(cors());
 dotEnv.config();
+
+const PORT = process.env.PORT || 4000;
+
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
@@ -30,7 +33,7 @@ app.listen(PORT,()=>{
   console.log(`server started at ${PORT}`)
 });
 
-app.use('/', (req, res) => {
+app.use('/apple', (req, res) => {
   res.send(`
     <html>
       <head><title>NodeJS Marquee</title></head>
